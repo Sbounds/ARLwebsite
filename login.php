@@ -8,7 +8,7 @@ if(!isset($_SESSION))
     session_start(); 
 } 
 
-$mysqli = new mysqli('localhost', 'root', 'qmpz1234zmmz4321', 'seniorproject') or die(mysqli_error($mysqli));
+$mysqli = new mysqli('localhost', 'root', '$Qmpz1234zmmz4321', 'arl-website') or die(mysqli_error($mysqli));
 ?>
 
 <!DOCTYPE html>

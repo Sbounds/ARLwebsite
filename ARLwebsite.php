@@ -95,10 +95,9 @@ if(isset($_POST['updatedata']))
 if(isset($_POST['login'])) {
  $email = $_POST['email'];
  $password = $_POST['password'];
- $salt1 = "$%8140569mm~&3o";
- $salt2 = "njofnbpaa90**%2";
- $combined = $salt1 . $password . $salt2;
- $sql = "SELECT email FROM admin WHERE email = '" . $email . "' AND password = PASSWORD('" . $combined . "')";
+ echo "EMAIL IS " . $email;
+ echo "PASSWORD IS " . $password;
+ $sql = "SELECT email FROM admin WHERE email = '" . $email . "' AND password = PASSWORD('" . $password . "')";
  $result = $mysqli->query($sql);
  if (!empty($result) && $result->num_rows > 0) {
  $_SESSION["email"] = $email;
